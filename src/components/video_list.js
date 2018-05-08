@@ -1,4 +1,5 @@
 import React from 'react';
+import VideoListItem from './video_list_item';
 
 
 
@@ -8,11 +9,18 @@ const VideoList = (props) =>  // FAT ARROW.  Was originally const VideoList = fu
 // So for example for us, since at this time of writing we only have one prop in the parent component 'App', 
 // you can imagine this gets passed into the argument of our functional component VideoList: const videos = props.videos;
 {
+   const videoItems =  props.videos.map
+    (
+        (video) => 
+        {
+            return < VideoListItem key = {video.etag} video = {video} />
+        }
+    );
 
     return (
 
         <ul className = "col-md-4 list-group" >  
-            {props.videos.length}
+           {videoItems}
 
         </ul>
     );

@@ -24,7 +24,7 @@ class App extends Component
 
     render()
     {
-        return (   ///   <------  MAKE SURE when returning components here that there is at least a '(' or 'div' on same line as 'return' or error will happen.  **** IMPORTANT I believe this is only true for the Render Function!
+        return (   ///   <------  MAKE SURE when returning components here that there is at least a '(' or 'div' on same line as 'return' or error will happen.  **** IMPORTANT I USED to believe this is only true for the Render Function but I tested it in another component a functional component and it didnt work you need to have curly braces on same line as return
             // *** IMPORTANT Below we are importing Components from different js files using JSX.  The 'default' exports that we classified in those respected js files.  No.000000tice the names of the components are exactly the same as we decided in those js files to export
             <div>
                     <SearchBar />  
