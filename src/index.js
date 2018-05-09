@@ -14,7 +14,7 @@ class App extends Component
 
         this.state = { videos: [] };
 
-        YTSearch({key: API_KEY, searchTerm: 'surfboards'}, (videos) => // FAT ARROW, it read: 'function(videos)' before we used the FAT ARROW.  Means exactly the same thing.
+        YTSearch({key: API_KEY, searchTerm: 'Surfboards'}, (videos) => // FAT ARROW, it read: 'function(videos)' before we used the FAT ARROW.  Means exactly the same thing.
         {
             this.setState({ videos });  
             // Updates state from this callback function

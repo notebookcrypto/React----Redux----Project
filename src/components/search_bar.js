@@ -25,7 +25,9 @@ class SearchBar extends Component
             value = {this.state.searchTerm}  // This line here makes this input element a "controlled component".  This is because the State is controlling the value of this element and not the other way around like it used to be.  This is now a controlled form element from the inside (State) out (external input)
             onChange = {this.onInputChange} />  
             <br />
-            VALUE OF INPUT:  {this.state.searchTerm}
+            {/* THIS IS A JSX comment */}
+            {/* VALUE OF INPUT:  {this.state.searchTerm} */}
+           
         </div>
 
         );

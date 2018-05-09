@@ -9,12 +9,15 @@ const VideoList = (props) =>  // FAT ARROW.  Was originally const VideoList = fu
 // So for example for us, since at this time of writing we only have one prop in the parent component 'App', 
 // you can imagine this gets passed into the argument of our functional component VideoList: const videos = props.videos;
 {
-   const videoItems =  props.videos.map
+   const videoItems =  props.videos.map // videoItems is an array and will contain a new array based on the props.videos array
     (
         (video) => 
         {
             return < VideoListItem key = {video.etag} video = {video} />
-        }
+        }  //  ABOVE here *** IMPORTANT  Props are for Parent to Child communications.  Props are defined and passed when you create a new component using the JSX tags. - Stephen Grider
+          // So Above since we are calling the VideoListItem component from this component Video_List, VideoListItem is a child of Video_List and we are passing Props.video from here to VideoListItem for access.
+          // Yes the APP component is the Parent to all other components and you could technically call props.videos from it in the VideoListItems component (I THINK) but remember that props.videos is an array and
+          //  here we are making this props property in between a map function call that separates each video out of the videos array in the first place, so it is exactly what we want to pass to VideoListItems as opposed to an array of videos.
     );
 
     return (
