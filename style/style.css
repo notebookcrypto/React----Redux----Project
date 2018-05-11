@@ -1,0 +1,33 @@
+.search-bar 
+{
+    margin: 20px;
+    text-align: center;
+}
+
+.search-bar input
+{
+    width: 75%;
+}
+
+.video-item img
+{
+    max-width: 64px;
+}
+
+.video-details .details
+{
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.media-left /* this ensures that only when we hover over the actual image thumbnail will our cursor appear  */
+{
+    cursor: pointer;
+}
+
+.list-group-item :hover  /* this also ensures that only when we hover over the actual image thumbnail the background color changes.  Of course cant see it since image is blocking the background color from changing but still  */
+{
+    background-color: #eee;
+}

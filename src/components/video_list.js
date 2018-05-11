@@ -13,9 +13,14 @@ const VideoList = (props) =>  // FAT ARROW.  Was originally const VideoList = fu
     (
         (video) => 
         {
-            return < VideoListItem key = {video.etag} video = {video} />
+            return (
+                < VideoListItem
+                    key = {video.etag} 
+                    video = {video} // this video object is getting created here but from the videos array of the APP parent component
+                    onVideoSelect = { props.onVideoSelect } />  // this props.onVideoSelect is getting created from here and passed to child/sibling object
+            );
         }  //  ABOVE here *** IMPORTANT  Props are for Parent to Child communications.  Props are defined and passed when you create a new component using the JSX tags. - Stephen Grider
-          // So Above since we are calling the VideoListItem component from this component Video_List, VideoListItem is a child of Video_List and we are passing Props.video from here to VideoListItem for access.
+           // So Above since we are calling the VideoListItem component from this component Video_List, VideoListItem is a child of Video_List and we are passing Props.video from here to VideoListItem for access.
           // Yes the APP component is the Parent to all other components and you could technically call props.videos from it in the VideoListItems component (I THINK) but remember that props.videos is an array and
           //  here we are making this props property in between a map function call that separates each video out of the videos array in the first place, so it is exactly what we want to pass to VideoListItems as opposed to an array of videos.
     );
@@ -27,7 +32,7 @@ const VideoList = (props) =>  // FAT ARROW.  Was originally const VideoList = fu
 
         </ul>
     );
-}
+};
 
 
 export default VideoList;
